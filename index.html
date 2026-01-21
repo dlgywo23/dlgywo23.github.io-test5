@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테크에듀 포털 (Interactive Tech-Edu Portal)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tech-Edu Portal</div>
+        <p>기술·가정 교과 학습 지원 플랫폼</p>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li data-area="manufacturing" class="active">제조기술</li>
+            <li data-area="construction">건설기술</li>
+            <li data-area="transportation">수송기술</li>
+            <li data-area="communication">통신기술</li>
+            <li data-area="biotech">생물기술</li>
+        </ul>
+    </nav>
+
+    <main id="content-container">
+        <!-- Area Title -->
+        <h1 id="area-title">제조기술</h1>
+
+        <!-- Sub Tabs -->
+        <div class="sub-tabs">
+            <button class="tab-btn active" data-tab="lesson">수업 내용</button>
+            <button class="tab-btn" data-tab="assessment">수행평가 및 루브릭</button>
+            <button class="tab-btn" data-tab="quiz">자가 진단 퀴즈</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="tab-content">
+            
+            <!-- 1. Lesson Content Section -->
+            <section id="lesson" class="tab-panel active">
+                <div id="lesson-text" class="content-box">
+                    <!-- Dynamic Lesson Content Loaded Here -->
+                </div>
+                
+                <div class="company-section">
+                    <h3>💡 관련 기업 및 주요 사업 (Data Integration)</h3>
+                    <div id="company-list" class="company-grid">
+                        <!-- Dynamic JSON Data Loaded Here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Assessment Section -->
+            <section id="assessment" class="tab-panel">
+                <div class="video-container">
+                    <h3>📹 실습 가이드 영상</h3>
+                    <div class="video-wrapper">
+                        <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="rubric-container">
+                    <h3>📊 수행평가 루브릭 (채점 기준표)</h3>
+                    <table id="rubric-table">
+                        <thead>
+                            <tr>
+                                <th>평가 요소</th>
+                                <th>상 (Excellent)</th>
+                                <th>중 (Average)</th>
+                                <th>하 (Needs Mprovement)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamic Table Rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. Quiz Section -->
+            <section id="quiz" class="tab-panel">
+                <div class="quiz-header">
+                    <h3>📝 자가 진단 퀴즈</h3>
+                    <span id="score-display">현재 점수: 0</span>
+                </div>
+                <div id="quiz-container" class="quiz-grid">
+                    <!-- Dynamic Quiz Questions -->
+                </div>
+                <button id="submit-quiz" class="primary-btn">설명 및 결과 확인</button>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Tech-Edu Portal. Designed for Interactive Learning.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
